@@ -217,9 +217,9 @@ var index = {
         $http.get($opts.api + 'storage/' + dist.token, {
           responseType: 'text',
           transformResponse: [(data) => { return data; }],
-          onDownloadProgress: p => {
-            $op.update.percent = p.loaded / dist.size;
-          }
+          // onDownloadProgress: p => {
+          //   $op.update.percent = p.loaded / dist.size;
+          // }
         }).then(res => {
           this.opts.debug && console.log('download complete, getting json...', typeof res.data);
           try {
