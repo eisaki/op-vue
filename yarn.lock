@@ -177,6 +177,13 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@capacitor/core@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-2.3.0.tgz#e8a16226d8f0873d73e259b96d32ab1f845f02b4"
+  integrity sha512-hiU6Im1R195NB/7U5Zdli5UVUje0JztgwE7r5zaRQKUXyEyHsQ4bOTo2qqPZv9XYXa1QrulfKAgMzBQzt41bVg==
+  dependencies:
+    tslib "^1.9.0"
+
 "@rollup/plugin-json@^4.0.2":
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-json/-/plugin-json-4.0.2.tgz#482185ee36ac7dd21c346e2dbcc22ffed0c6f2d6"
@@ -1766,6 +1773,11 @@ tslib@^1.10.0:
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.1.tgz#eb15d128827fbee2841549e171f45ed338ac7e35"
   integrity sha512-aZW88SY8kQbU7gpV19lN24LtXh/yD4ZZg6qieAJDDg+YBsJcSmLGK9QpnUjAKVG/xefmvJGd1WUmfpT/g6AJGA==
+
+tslib@^1.9.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
+  integrity sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==
 
 tunnel-agent@^0.6.0:
   version "0.6.0"

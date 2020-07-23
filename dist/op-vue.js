@@ -73,39 +73,12 @@ var utils = {
     // console.timeLog('stringify')
     // console.log('compressing object from ', obj.length, 'bytes...')
     // console.time('deflate')
-    var info = Device.getInfo()
-
-    info.then(function(result) {
-      //se sono dentro web carico nel local storage
-      if (result.platform == 'web'){
-        console.log("inizio salvataggio dentro local storage")
-        obj = pako.deflate(obj, { to: 'string' })
-        localStorage.setItem(name, obj)
-        console.log("Fine salvataggio dentro local storage")
-      } else
-      if(result.platform == 'android' || result.platform == "ios"){
-        console.log("sono dentro il dispositivo")
-        console.log("Fine salvataggio dentro File")
-        Filesystem.writeFile({
-          path: 'file.json',
-          data: JSON.stringify(obj),
-          directory: FilesystemDirectory.Data,
-          encoding: FilesystemEncoding.UTF8
-        }).then(function (saveResult){
-          console.log("stampa risultato salvataggio")
-          console.log(saveResult)
-        })
-
-      }
-      console.log("salvato!!!") // "Stuff worked!"
-      console.log(result) // "Stuff worked!"
-
-    }, function(err) {
-      console.log("NON ho salvato") // "Stuff worked!"
-      console.log(err) // Error: "It broke"
-    })
+    obj = pako.deflate(obj, { to: 'string' });
+    // console.timeLog('deflate')
+    // console.log('saving compressed item ', obj.length, 'bytes...')
+    // ldb.set(name, obj);
+    localStorage.setItem(name, obj);
   },
-
 
   load (name, on_finish) {
     console.time('getItem before');
